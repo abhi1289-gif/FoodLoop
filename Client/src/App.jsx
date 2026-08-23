@@ -9,7 +9,7 @@ import Hotel from './Pages/Register/Hotel'
 import Charity from './Pages/Register/Charity'
 import Volunteer from './Pages/Register/Volunteer'
 import Food from './Pages/Food'
-import AddFood from './Pages/Addfood'
+import AddFood from './Pages/AddFood'
 import Main from './Pages/Main'
 import Notifications from './Pages/Notifications'
 
