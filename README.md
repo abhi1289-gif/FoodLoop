@@ -2,7 +2,7 @@
 
 ### Turning Surplus Food Into Hope
 
-FoodLoop is a web-based food redistribution platform designed to help reduce food waste by connecting **hotels, charities, and volunteers**.
+FoodLoop is a web-based food redistribution platform designed to reduce food waste by connecting **hotels, charities, and volunteers**.
 
 The platform allows hotels and other food providers to share surplus food, while charities can request food and volunteers can help with collection and delivery.
 
@@ -16,10 +16,18 @@ FoodLoop aims to bridge this gap through a centralized platform where:
 
 - 🏨 **Hotels** can donate surplus food.
 - ❤️ **Charities** can receive and manage food donations.
-- 🚚 **Volunteers** can help deliver donated food.
+- 🚚 **Volunteers** can help with food collection and delivery.
 - 🔔 Users can receive notifications about relevant activities.
 
 The goal is to make food redistribution easier, faster, and more organized.
+
+---
+
+## 🌐 Live Demo / Test Link
+
+**Live Website:** food-loop-1ldg.vercel.app
+
+> You can use the live website to test the FoodLoop application.
 
 ---
 
@@ -29,7 +37,6 @@ The goal is to make food redistribution easier, faster, and more organized.
 - User registration and login
 - Role-based access
 - Separate interfaces for different user types
-- Secure password handling
 
 ### 🏨 Hotels
 - Register as a food provider
