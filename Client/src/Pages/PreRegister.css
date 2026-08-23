@@ -1,0 +1,356 @@
+.pre-register {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 55px 30px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(65, 105, 225, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(65, 105, 225, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f9faff,
+      #eef2ff
+    );
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.pre-register-heading {
+  text-align: center;
+
+  margin-bottom: 45px;
+
+  animation: fadeDown 0.5s ease;
+}
+
+.pre-register-heading h1 {
+  margin: 0 0 12px;
+
+  font-size: clamp(34px, 5vw, 48px);
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  background: linear-gradient(
+    90deg,
+    #111111,
+    #4169e1
+  );
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.pre-register-heading p {
+  margin: 0;
+
+  font-size: 17px;
+
+  color: #6b7280;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+.registration-container {
+  width: 100%;
+
+  max-width: 1080px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+}
+
+
+/* =========================
+   REGISTRATION CARD
+========================= */
+
+.registration-card {
+  position: relative;
+
+  flex: 1;
+
+  max-width: 330px;
+
+  min-height: 350px;
+
+  padding: 35px 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(65, 105, 225, 0.13);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.07),
+    0 4px 12px rgba(65, 105, 225, 0.05);
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* HOVER */
+
+.registration-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(65, 105, 225, 0.25);
+
+  box-shadow:
+    0 20px 45px rgba(65, 105, 225, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.registration-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.registration-icon {
+  width: 72px;
+  height: 72px;
+
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #111111,
+    #4169e1
+  );
+
+  font-size: 31px;
+
+  box-shadow:
+    0 10px 22px rgba(65, 105, 225, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.registration-card:hover .registration-icon {
+  transform: scale(1.08) rotate(-2deg);
+
+  box-shadow:
+    0 12px 27px rgba(65, 105, 225, 0.30);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.registration-card h2 {
+  margin: 0 0 12px;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  color: #111;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.registration-card p {
+  margin: 0 0 25px;
+
+  max-width: 270px;
+
+  line-height: 1.6;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.registration-card button {
+  width: 190px;
+
+  padding: 12px 15px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    90deg,
+    #111111,
+    #4169e1
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 17px rgba(65, 105, 225, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.registration-card button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 23px rgba(65, 105, 225, 0.30);
+}
+
+
+/* BUTTON CLICK */
+
+.registration-card button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .registration-container {
+    flex-wrap: wrap;
+
+    gap: 20px;
+  }
+
+  .registration-card {
+    flex: 0 1 320px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .pre-register {
+    padding: 40px 20px;
+  }
+
+  .pre-register-heading {
+    margin-bottom: 35px;
+  }
+
+  .pre-register-heading h1 {
+    font-size: 34px;
+  }
+
+  .pre-register-heading p {
+    font-size: 15px;
+  }
+
+  .registration-container {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+  }
+
+  .registration-card {
+    width: 100%;
+
+    max-width: 400px;
+
+    min-height: 320px;
+  }
+
+}

@@ -1,0 +1,388 @@
+.food-page {
+  min-height: calc(100vh - 70px);
+  padding: 30px 5%;
+  background: #f5f7fb;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.food-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #111827;
+}
+
+.food-header p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================
+   ADD FOOD BUTTON
+========================= */
+
+.add-food-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  background: linear-gradient(
+    90deg,
+    #111827,
+    #4169e1
+  );
+
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.add-food-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(65, 105, 225, 0.25);
+}
+
+/* =========================
+   FOOD GRID
+========================= */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card {
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  border: 1px solid #edf0f5;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 10px 25px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  min-width: 0;
+}
+
+.food-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   HOTEL
+========================= */
+
+.hotel-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hotel-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef2ff;
+
+  font-size: 20px;
+
+  flex-shrink: 0;
+}
+
+.hotel-info h2 {
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.hotel-info p {
+  margin: 4px 0 0;
+
+  font-size: 12px;
+
+  color: #6b7280;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  height: 1px;
+
+  background: #e5e7eb;
+
+  margin: 16px 0;
+}
+
+/* =========================
+   FOOD INFORMATION
+========================= */
+
+.food-info h3 {
+  margin: 0 0 13px;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.food-info p {
+  margin: 8px 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #4b5563;
+}
+
+.food-info strong {
+  color: #374151;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.food-status {
+  margin-top: 16px;
+
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+.status.available {
+  background: #e8f7ed;
+  color: #198754;
+}
+
+.status.requested {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.picked_up {
+  background: #e0ecff;
+  color: #315bb5;
+}
+
+/* =========================
+   REQUEST / PICKUP BUTTON
+========================= */
+
+.request-btn,
+.accept-btn {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    90deg,
+    #111827,
+    #4169e1
+  );
+
+  transition: all 0.2s ease;
+}
+
+.request-btn:hover,
+.accept-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(65, 105, 225, 0.25);
+}
+
+/* =========================
+   PICKUP BUTTON
+========================= */
+
+.pickup-btn {
+  margin-top: 7px;
+
+  padding: 7px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.pickup-btn:hover {
+  background: #f3f4f6;
+
+  border-color: #4169e1;
+
+  color: #315bb5;
+}
+
+/* =========================
+   DELIVERY CARD
+========================= */
+
+.delivery-card {
+  padding: 4px 0;
+}
+
+.delivery-card > h2 {
+  margin: 0 0 16px;
+
+  font-size: 21px;
+
+  color: #111827;
+}
+
+.delivery-section {
+  margin-bottom: 15px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.delivery-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.delivery-section h3 {
+  margin: 0 0 7px;
+
+  font-size: 15px;
+
+  color: #374151;
+}
+
+.delivery-section p {
+  margin: 5px 0;
+
+  font-size: 13px;
+
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .food-page {
+    padding: 25px 4%;
+  }
+
+  .food-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .food-header h1 {
+    font-size: 26px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-food-btn {
+    width: 100%;
+  }
+
+}

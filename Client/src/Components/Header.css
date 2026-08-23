@@ -1,0 +1,126 @@
+.header {
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  /* Black → Royal Blue */
+  background: linear-gradient(to right, #000000, #002cb1);
+
+  border-bottom: 1px solid #222;
+  border-radius: 10px;
+}
+
+/* LEFT SIDE */
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: clamp(55px, 6vw, 50px);
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 3vw;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+
+/* RIGHT SIDE */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.header-right a:hover {
+  color: #dbe4ff;
+}
+
+
+/* PROFILE */
+
+.profile-btn {
+  border: none;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  background-color: rgba(255, 255, 255, 0.15);
+
+  transition: background-color 0.2s ease;
+}
+
+.profile-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.profile-icon {
+  font-size: 20px;
+  color: white;
+}
+
+/* NOTIFICATION */
+
+.notification-btn {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(65, 105, 225, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.notification-btn:hover {
+  background: rgba(65, 105, 225, 0.45);
+  transform: translateY(-2px);
+}

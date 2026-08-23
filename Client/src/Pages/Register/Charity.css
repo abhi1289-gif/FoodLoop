@@ -1,0 +1,189 @@
+.charity-page {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f3f5ff
+  );
+}
+
+
+/* CARD */
+
+.charity-card {
+  width: 100%;
+  max-width: 550px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: white;
+
+  border-radius: 20px;
+
+  border: 1px solid #e1e5f5;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+/* HEADING */
+
+.charity-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.charity-heading h1 {
+  margin: 0 0 10px;
+
+  font-size: 34px;
+
+  background: linear-gradient(
+    to right,
+    #000000,
+    #4169e1
+  );
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.charity-heading p {
+  margin: 0;
+
+  color: #666;
+  font-size: 15px;
+}
+
+
+/* INPUT GROUP */
+
+.charity-input-group {
+  margin-bottom: 20px;
+}
+
+.charity-input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* INPUT / SELECT / TEXTAREA */
+
+.charity-input-group input,
+.charity-input-group select,
+.charity-input-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d5d8e2;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  font-family: inherit;
+
+  background: white;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* TEXTAREA */
+
+.charity-input-group textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+
+/* FOCUS */
+
+.charity-input-group input:focus,
+.charity-input-group select:focus,
+.charity-input-group textarea:focus {
+  border-color: #4169e1;
+
+  box-shadow:
+    0 0 0 3px rgba(65, 105, 225, 0.12);
+}
+
+
+/* BUTTON */
+
+.charity-register-btn {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    to right,
+    #000000,
+    #4169e1
+  );
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.charity-register-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(65, 105, 225, 0.3);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .charity-card {
+    padding: 30px 25px;
+  }
+
+  .charity-heading h1 {
+    font-size: 28px;
+  }
+
+}

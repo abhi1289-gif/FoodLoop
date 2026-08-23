@@ -1,0 +1,534 @@
+/* MAIN PAGE */
+
+.main-page {
+  min-height: calc(100vh - 70px);
+  background: #f5f7fc;
+  color: #111;
+}
+
+
+/* HERO */
+
+.main-hero {
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 70px 9%;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* LEFT CONTENT */
+
+.main-content {
+  width: 52%;
+  max-width: 700px;
+}
+
+.main-badge {
+  display: inline-block;
+
+  padding: 9px 17px;
+
+  margin-bottom: 25px;
+
+  border-radius: 30px;
+
+  background: #e8edff;
+  color: #4169e1;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.main-content h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 5vw, 72px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.main-content h1 span {
+  color: #4169e1;
+}
+
+
+.main-content > p {
+  max-width: 600px;
+
+  margin: 28px 0;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #606778;
+}
+
+
+/* BUTTONS */
+
+.main-buttons {
+  display: flex;
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+
+.main-login-btn,
+.main-register-btn {
+  padding: 14px 30px;
+
+  border-radius: 9px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+
+.main-login-btn {
+  border: none;
+
+  color: white;
+
+  background: linear-gradient(
+    90deg,
+    #000000,
+    #4169e1
+  );
+}
+
+
+.main-register-btn {
+  background: white;
+
+  border: 1px solid #cfd4e2;
+
+  color: #111;
+}
+
+
+.main-login-btn:hover,
+.main-register-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* SMALL STATS */
+
+.main-stats {
+  display: flex;
+
+  gap: 45px;
+
+  margin-top: 55px;
+}
+
+
+.main-stats div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.main-stats strong {
+  font-size: 16px;
+}
+
+
+.main-stats span {
+  font-size: 13px;
+  color: #777;
+}
+
+
+/* LOGO AREA */
+
+.main-logo-area {
+  position: relative;
+
+  width: 42%;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* GLOW */
+
+.logo-glow {
+  position: absolute;
+
+  width: 440px;
+  height: 440px;
+
+  border-radius: 50%;
+
+  background: rgba(65, 105, 225, 0.12);
+
+  filter: blur(20px);
+
+  animation: logoGlow 4s ease-in-out infinite;
+}
+
+
+@keyframes logoGlow {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+}
+
+
+/* LOGO */
+
+.logo-circle {
+  position: relative;
+
+  width: 390px;
+  height: 390px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #000;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.2);
+
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+}
+
+
+@keyframes logoFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+}
+
+
+/* TAGLINE */
+
+.logo-tagline {
+  position: absolute;
+
+  bottom: 30px;
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  background: white;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333;
+}
+
+.logo-tagline span {
+  margin-right: 7px;
+}
+
+
+/* ABOUT */
+
+.main-about {
+  padding: 90px 8%;
+
+  text-align: center;
+
+  background: white;
+}
+
+
+.main-about h2 {
+  margin: 0;
+
+  font-size: 38px;
+}
+
+
+.main-about > p {
+  max-width: 650px;
+
+  margin: 15px auto 50px;
+
+  line-height: 1.7;
+
+  color: #666;
+}
+
+
+/* COMMUNITY CARDS */
+
+.community-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: auto;
+}
+
+
+.community-card {
+  padding: 30px;
+
+  border: 1px solid #e5e8f0;
+
+  border-radius: 16px;
+
+  background: #fafbff;
+
+  transition: 0.25s ease;
+}
+
+
+.community-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 15px 35px rgba(65, 105, 225, 0.12);
+}
+
+
+.community-card > div {
+  font-size: 35px;
+
+  margin-bottom: 15px;
+}
+
+
+.community-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 21px;
+}
+
+
+.community-card p {
+  margin: 0;
+
+  color: #666;
+
+  line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+.main-footer {
+  padding: 35px 8%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #080b18;
+
+  color: white;
+}
+
+
+.main-footer strong {
+  font-size: 22px;
+}
+
+
+.main-footer p {
+  margin: 5px 0 0;
+
+  color: #aeb4c5;
+
+  font-size: 13px;
+}
+
+
+.footer-links {
+  display: flex;
+
+  gap: 25px;
+}
+
+
+.footer-links span {
+  cursor: pointer;
+
+  color: #d8dcef;
+
+  transition: 0.2s;
+}
+
+
+.footer-links span:hover {
+  color: #6d8cff;
+}
+
+
+.copyright {
+  text-align: right;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .main-hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding-top: 60px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-buttons {
+    justify-content: center;
+  }
+
+  .main-stats {
+    justify-content: center;
+  }
+
+  .main-logo-area {
+    width: 100%;
+
+    min-height: 420px;
+  }
+
+  .logo-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .community-cards {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .main-hero {
+    padding: 45px 6%;
+  }
+
+  .main-content h1 {
+    font-size: 43px;
+  }
+
+  .main-content > p {
+    font-size: 16px;
+  }
+
+  .main-stats {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .main-logo-area {
+    min-height: 350px;
+  }
+
+  .logo-circle {
+    width: 270px;
+    height: 270px;
+  }
+
+  .logo-glow {
+    width: 300px;
+    height: 300px;
+  }
+
+  .main-footer {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+.contact-link:hover {
+  text-decoration: none;
+}
