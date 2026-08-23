@@ -25,11 +25,9 @@ The goal is to make food redistribution easier, faster, and more organized.
 
 ## 🌐 Live Demo / Test Link
 
-**Live Website:** food-loop-1ldg.vercel.app
+**Live Website:** [FoodLoop](https://food-loop-1ldg.vercel.app/)
 
 > You can use the live website to test the FoodLoop application.
-
----
 
 ## ✨ Features
 
