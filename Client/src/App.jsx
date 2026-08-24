@@ -12,6 +12,7 @@ import Food from './Pages/Food'
 import AddFood from './Pages/AddFood'
 import Main from './Pages/Main'
 import Notifications from './Pages/Notifications'
+import ProtectedRoute from './Components/ProtectedRoute'
 
 export default function App() {
   return (
@@ -25,9 +26,9 @@ export default function App() {
         <Route path='/register/hotel' element={<Hotel/>}></Route>
         <Route path='/register/charity' element={<Charity/>}></Route>
         <Route path='/register/volunteer' element={<Volunteer/>}></Route>
-        <Route path='/food' element={<Food/>}></Route>
-        <Route path='/add-food' element={<AddFood/>}></Route>
-        <Route path="/notifications"element={<Notifications />}></Route>
+        <Route path='/food' element={<ProtectedRoute><Food/></ProtectedRoute>}></Route>
+        <Route path='/add-food' element={<ProtectedRoute><AddFood/></ProtectedRoute>}></Route>
+        <Route path="/notifications"element={<ProtectedRoute><Notifications /></ProtectedRoute>}></Route>
       </Routes>
     </div>
   )

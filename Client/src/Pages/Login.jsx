@@ -35,6 +35,7 @@ export default function Login() {
       localStorage.setItem('Id', data.userId);
 
       alert('You are Successfully logged in');
+      localStorage.setItem("isLoggedIn", "true");
       
       navigate('/food');
     }
