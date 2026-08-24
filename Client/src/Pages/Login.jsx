@@ -16,7 +16,7 @@ export default function Login() {
     const formData = {phone, password, role};
 
     try{
-      console.log("API URL:", import.meta.env.VITE_API_URL);
+
       const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
         method: "POST",
         headers: {
@@ -26,8 +26,6 @@ export default function Login() {
       });
 
       const data = await response.json();
-
-      console.log("LOGIN RESPONSE:", data);
 
       if(!response.ok){
         alert(data.message);
