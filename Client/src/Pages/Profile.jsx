@@ -1,4 +1,5 @@
 import React from 'react';
+import './Profile.css';
 
 export default function Profile() {
 
@@ -6,9 +7,11 @@ export default function Profile() {
 
   if (!userData) {
     return (
-      <div>
-        <h1>My Profile</h1>
-        <p>User information not found. Please login again.</p>
+      <div className="profile-page">
+        <div className="profile-card error-card">
+          <h1>My Profile</h1>
+          <p>User information not found. Please login again.</p>
+        </div>
       </div>
     );
   }
@@ -16,37 +19,96 @@ export default function Profile() {
   const user = JSON.parse(userData);
   const role = localStorage.getItem("role");
 
+  const displayName = user.owner || user.name || "User";
+
   return (
-    <div>
-      <h1>My Profile</h1>
+    <div className="profile-page">
 
-      <p>
-        <strong>Role:</strong> {role}
-      </p>
+      <div className="profile-card">
 
-      <p>
-        <strong>ID:</strong> {user.id}
-      </p>
+        {/* Profile Header */}
+        <div className="profile-header">
 
-      <p>
-        <strong>Name / Owner:</strong> {user.owner || user.name}
-      </p>
+          <div className="profile-avatar">
+            👤
+          </div>
 
-      <p>
-        <strong>Email:</strong> {user.email}
-      </p>
+          <div>
+            <h1>{displayName}</h1>
 
-      <p>
-        <strong>Phone:</strong> {user.phone_number}
-      </p>
+            <p className="profile-role">
+              {role?.charAt(0).toUpperCase() + role?.slice(1)}
+            </p>
+          </div>
 
-      <p>
-        <strong>Address:</strong> {user.address}
-      </p>
+        </div>
 
-      <p>
-        <strong>City:</strong> {user.city}
-      </p>
+
+        {/* User Information */}
+        <div className="profile-section">
+
+          <h2>Personal Information</h2>
+
+          <div className="profile-grid">
+
+            <div className="profile-item">
+              <span className="profile-label">User ID</span>
+              <span className="profile-value">{user.id}</span>
+            </div>
+
+            <div className="profile-item">
+              <span className="profile-label">Role</span>
+              <span className="profile-value role-badge">
+                {role}
+              </span>
+            </div>
+
+            <div className="profile-item">
+              <span className="profile-label">Name / Owner</span>
+              <span className="profile-value">
+                {displayName}
+              </span>
+            </div>
+
+            <div className="profile-item">
+              <span className="profile-label">Email</span>
+              <span className="profile-value">
+                {user.email}
+              </span>
+            </div>
+
+            <div className="profile-item">
+              <span className="profile-label">Phone Number</span>
+              <span className="profile-value">
+                {user.phone_number}
+              </span>
+            </div>
+
+            <div className="profile-item">
+              <span className="profile-label">City</span>
+              <span className="profile-value">
+                {user.city}
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* Address */}
+        <div className="profile-section">
+
+          <h2>Address</h2>
+
+          <div className="address-box">
+            📍 {user.address || "Address not provided"}
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   );
 }
