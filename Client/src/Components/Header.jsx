@@ -15,6 +15,10 @@ export default function Header() {
     navigate('/notifications');
   }
 
+  const goToProfile = () => {
+    navigate('/profile');
+  }
+
   // Public pages where notification/profile should NOT appear
   const publicPages = [
     '/',
@@ -75,7 +79,8 @@ export default function Header() {
 
         {!isPublicPage && (
 
-          <button className="profile-btn">
+          <button className="profile-btn"
+          onClick={goToProfile}>
             <span className="profile-icon">
               👤
             </span>

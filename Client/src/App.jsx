@@ -13,6 +13,7 @@ import AddFood from './Pages/AddFood'
 import Main from './Pages/Main'
 import Notifications from './Pages/Notifications'
 import ProtectedRoute from './Components/ProtectedRoute'
+import Profile from './Pages/Profile'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path='/food' element={<ProtectedRoute><Food/></ProtectedRoute>}></Route>
         <Route path='/add-food' element={<ProtectedRoute><AddFood/></ProtectedRoute>}></Route>
         <Route path="/notifications"element={<ProtectedRoute><Notifications /></ProtectedRoute>}></Route>
+        <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}></Route>
       </Routes>
     </div>
   )

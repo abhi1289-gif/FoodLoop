@@ -16,6 +16,7 @@ export default function Login() {
     const formData = {phone, password, role};
 
     try{
+      console.log("API URL:", import.meta.env.VITE_API_URL);
       const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
         method: "POST",
         headers: {
@@ -26,6 +27,8 @@ export default function Login() {
 
       const data = await response.json();
 
+      console.log("LOGIN RESPONSE:", data);
+
       if(!response.ok){
         alert(data.message);
         return;
@@ -33,11 +36,11 @@ export default function Login() {
 
       localStorage.setItem('role', role);
       localStorage.setItem('Id', data.userId);
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("user", JSON.stringify(data.user));
 
       alert('You are Successfully logged in');
-      localStorage.setItem("isLoggedIn", "true");
-      
-      navigate('/food');
+      navigate('/food');  
     }
     catch(err){
       console.log(err);
