@@ -231,16 +231,14 @@ app.post('/login', async(req, res)=>{
             });
         }
 
-        const sql = `SELECT id, password FROM ${table}  WHERE phone_number = ?`;
-        
+        const sql = `SELECT * FROM ${table} WHERE phone_number = ?`;
+
         const [rows] = await db.execute(sql, [phone]);
 
-        if (rows.length === 0) {
-
+        if(rows.length === 0){
             return res.status(401).json({
                 message: 'Invalid phone number or password'
             });
-
         }
 
         const user = rows[0];
@@ -256,10 +254,14 @@ app.post('/login', async(req, res)=>{
             });
         }
 
+        // Remove password before sending user data
+        const { password: _, ...userData } = user;
+
         res.status(200).json({
             message: 'User logged in successfully',
             userId: user.id,
-            role: role
+            role: role,
+            user: userData
         });
     }
     catch(error){
